@@ -8,7 +8,7 @@ export const Contact = () => {
       className="bg-customblue text-white py-[205.5px] px-8"
     >
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 w-[70%]">
-        {/* Contact Info */}
+
         <div className="font-manrope">
           <h3 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
             Get in touch
@@ -36,7 +36,6 @@ export const Contact = () => {
           </div>
         </div>
 
-        {/* Contact Form */}
         <ContactForm />
       </div>
     </section>

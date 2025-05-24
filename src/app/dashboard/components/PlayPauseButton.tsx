@@ -6,6 +6,7 @@ interface PlayPauseButtonProps {
   toggleVideoPlayback: () => void;
   isVideoPaused: boolean;
 }
+
 export const PlayPauseButton = ({
   activeSection,
   videoProgress,
@@ -14,16 +15,15 @@ export const PlayPauseButton = ({
 }: PlayPauseButtonProps) => {
   return (
     <div
-      className={`flex flex-col items-center p-3 ${
-        activeSection !== COMMERCIAL ? "ml-8" : ""
+      className={`flex flex-col items-center p-2 sm:p-3 ${
+        activeSection !== COMMERCIAL ? "ml-4 sm:ml-8" : ""
       }`}
     >
-      <div className="relative">
-
+      <div className="relative w-[40px] h-[40px] sm:w-[51.22px] sm:h-[51.22px]">
         <svg
           className="absolute inset-0 -rotate-90 transform"
-          width={51.22}
-          height={51.22}
+          width="100%"
+          height="100%"
           viewBox="0 0 51.22 51.22"
         >
           <circle
@@ -52,21 +52,21 @@ export const PlayPauseButton = ({
 
         <button
           onClick={toggleVideoPlayback}
-          className="relative w-[51.22px] h-[51.22px] border-white/30 flex items-center justify-center hover:border-white/50 transition-colors group"
+          className="relative w-full h-full border border-white/30 flex items-center justify-center hover:border-white/50 transition-colors group rounded-full"
           aria-label={isVideoPaused ? "Play video" : "Pause video"}
         >
           {isVideoPaused ? (
-            <div className="w-0 h-0 border-l-[10px] border-l-white border-t-[7px] border-t-transparent border-b-[7px] border-b-transparent ml-1 transition-colors"></div>
+            <div className="w-0 h-0 border-l-[8px] sm:border-l-[10px] border-l-white border-t-[6px] sm:border-t-[7px] border-t-transparent border-b-[6px] sm:border-b-[7px] border-b-transparent ml-1 transition-colors"></div>
           ) : (
-            <div className="flex space-x-1">
-              <div className="w-1.5 h-5 bg-white transition-colors"></div>
-              <div className="w-1.5 h-5 bg-white transition-colors"></div>
+            <div className="flex space-x-[3px] sm:space-x-1">
+              <div className="w-1 h-4 sm:w-1.5 sm:h-5 bg-white transition-colors"></div>
+              <div className="w-1 h-4 sm:w-1.5 sm:h-5 bg-white transition-colors"></div>
             </div>
           )}
         </button>
       </div>
 
-      <span className="text-xs text-gray-300 opacity-50 mt-2">
+      <span className="text-[10px] sm:text-xs text-gray-300 opacity-50 mt-2">
         {isVideoPaused ? "Play" : "Pause"}
       </span>
     </div>
