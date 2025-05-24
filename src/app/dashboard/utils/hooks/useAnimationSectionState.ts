@@ -1,7 +1,7 @@
 import { COMMERCIAL, PASSENGER } from "core/utils/constants/constants";
 import { RefObject, useEffect, useState } from "react";
 
-interface IUseAnimationSectionState {
+export interface IUseAnimationSectionState {
   isVisible: boolean;
   showVehicle: boolean;
   activeSection: string;
