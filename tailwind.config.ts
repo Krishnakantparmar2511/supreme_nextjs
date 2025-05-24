@@ -14,6 +14,7 @@ const config: Config = {
       colors: {
         customblue: "#0067B1",
         buttonBlue: "#5CD6FF",
+        toggleBlue: "#00bfff",
       },
     },
   },
