@@ -3,7 +3,7 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
-  title: "Supreme Group",
+  title: "Automobile Animation",
   description: "Created By Krishnakant",
 };
 
